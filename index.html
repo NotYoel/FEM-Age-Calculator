@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main>
+    <div class="main-container">
+      <form class="main-form">
+        <div class="form-input">
+          <label for="input-day"><span class="bold">Day</span></label>
+          <input id="input-day" type="text" class="bold" placeholder="DD">
+          <span id="day-et" class="error-text"></span>
+        </div>
+
+        <div class="form-input">
+          <label for="input-month"><span class="bold">Month</span></label>
+          <input id="input-month" type="text" class="bold" placeholder="MM">
+          <span id="month-et" class="error-text"></span>
+        </div>
+
+        <div class="form-input">
+          <label for="input-year"><span class="bold">Year</span></label>
+          <input id="input-year" type="text" class="bold" placeholder="YYYY">
+          <span id="year-et" class="error-text"></span>
+        </div>
+
+        <img id="arrow-icon" src="assets/images/icon-arrow.svg" alt="Submit Arrow Icon">
+      </form>
+
+      <section class="main-display">
+        <span class="display-text"><span class="s-bold"><span id="dt-years" class="dt-purple">- -</span>years</span></span><br>
+        <span class="display-text"><span class="s-bold"><span id="dt-months" class="dt-purple">- -</span>months</span></span><br>
+        <span class="display-text"><span class="s-bold"><span id="dt-days" class="dt-purple">- -</span>days</span></span>
+      </section>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a target="_blank" href="https://www.github.com/NotYoel">NotYoel</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

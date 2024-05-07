@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* VARIABLES */
+:root {
+    --color-purple: hsl(259, 100%, 65%);
+    --color-lred: hsl(0, 100%, 67%);
+    --color-lred-transparent: hsla(0, 100%, 67%, 0.026);
+    --color-offwhite: hsl(0, 0%, 94%);
+    --color-lgray: hsl(0, 0%, 86%);
+    --color-smokey-gray: hsl(0, 1%, 44%);
+    --color-offblack: hsl(0, 0%, 8%);
+
+    --b-radius-sm: 8px;
+    --b-radius-med: 20px;
+    --b-radius-lg: 30%;
+
+    --margin-sm: 8px;
+    --margin-med: 35px;
+    --margin-lg: 45px;
+}
+
+/* GENERAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.s-bold {
+    font-weight: 800;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-offwhite);
+}
+
+/* MAIN CARD */
+main {
+    background-color: white;
+    height: max-content;
+    width: 700px;
+    border-radius: var(--b-radius-med) var(--b-radius-med) var(--b-radius-lg) var(--b-radius-med);
+    padding: var(--margin-lg);
+}
+
+.main-container {
+    height: 100%;
+}
+
+/* FORM SECTION */
+.main-form {
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: calc(var(--margin-lg) + 12px);
+    border-bottom: 1px solid var(--color-lgray);
+    position: relative;
+    margin-bottom: var(--margin-med);
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input label {
+    color: var(--color-smokey-gray);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.form-input input {
+    height: 55px;
+    width: 80%;
+    max-width: 130px;
+    border-radius: var(--b-radius-sm);
+    margin-right: var(--margin-med);
+    margin-top: var(--margin-sm);
+    border: 1px solid var(--color-lgray);
+    padding-left: calc(var(--margin-sm) + 8px);
+    font-size: 1.3rem;
+    outline: none;
+    color: var(--color-offblack);   
+}
+
+.form-input input.active {
+    border-color: var(--color-lred);
+    background-color: var(--color-lred-transparent);
+}
+
+.error-text {
+    margin-top: var(--margin-sm);
+    color: var(--color-lred);
+    font-style: italic;
+    font-size: 0.7rem;
+    display: none;
+}
+
+.error-text.active {
+    display: block;
+}
+
+#arrow-icon {
+    background-color: var(--color-purple);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(50%);
+    border-radius: 50%;
+    height: 70px;
+    padding: calc(var(--margin-sm) + 8px);
+}
+
+#arrow-icon:hover {
+    cursor: pointer;
+}
+
+/* DISPLAY SECTION */
+.main-display {
+    line-height: 70px;
+}
+
+.display-text {
+    font-size: 4.8rem;
+    font-style: italic;
+}
+
+.dt-purple {
+    color: var(--color-purple);
+    margin-right: var(--margin-sm);
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        width: 95%;
+        
+    }
+}
+
+@media only screen and (max-width: 545px) {
+    .main-form {
+        margin-bottom: calc(var(--margin-med) * 2);
+    }
+
+    .main-display {
+        line-height: 50px;
+    }
+
+    .display-text {
+        font-size: 3.5rem;
+    }
+
+    #arrow-icon {
+        right: 50%;
+        transform: translateX(50%) translateY(50%);
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .main-display {
+        line-height: 40px;
+    }
+
+    .display-text {
+        font-size: 2.95rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main-form {
+        margin-bottom: var(--margin-med);
+    }
+
+    .main-display {
+        line-height: 35px;
+    }
+
+    .display-text {
+        font-size: 2.35rem;
+    }
+}
