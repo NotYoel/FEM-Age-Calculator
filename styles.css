@@ -141,6 +141,7 @@ main {
     margin-right: var(--margin-sm);
 }
 
+/* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
     main {
         width: 95%;
