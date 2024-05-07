@@ -4,8 +4,9 @@
 /* VARIABLES */
 :root {
     --color-purple: hsl(259, 100%, 65%);
+    --color-purple-transparent: hsl(259, 100%, 65%, 0.05);
     --color-lred: hsl(0, 100%, 67%);
-    --color-lred-transparent: hsla(0, 100%, 67%, 0.026);
+    --color-lred-transparent: hsla(0, 100%, 67%, 0.05);
     --color-offwhite: hsl(0, 0%, 94%);
     --color-lgray: hsl(0, 0%, 86%);
     --color-smokey-gray: hsl(0, 1%, 44%);
@@ -91,7 +92,12 @@ main {
     padding-left: calc(var(--margin-sm) + 8px);
     font-size: 1.3rem;
     outline: none;
-    color: var(--color-offblack);   
+    color: var(--color-offblack);
+}
+
+.form-input input:focus {
+    border-color: var(--color-purple);
+    background-color: var(--color-purple-transparent);
 }
 
 .form-input input.active {
@@ -123,6 +129,11 @@ main {
 }
 
 #arrow-icon:hover {
+    background-color: var(--color-offblack);
+    box-shadow: 0 0 3px;
+}
+
+#arrow-icon:hover {
     cursor: pointer;
 }
 
@@ -145,7 +156,6 @@ main {
 @media only screen and (max-width: 768px) {
     main {
         width: 95%;
-        
     }
 }
 
